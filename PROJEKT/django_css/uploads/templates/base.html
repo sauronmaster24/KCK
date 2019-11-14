@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Analysis</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  </head>
+  <body>
+
+<div id = "witaj"><li><a href="{% url 'witaj' %}">Witaj serdecznie</a></li></div>
+<div id = "autorzy"><li><a href="{% url 'autorzy' %}">Autorzy projektu</a></li></div>
+<div id = "generator"><a href="{% url 'generator' %}">Wygeneruj!</a></li></div>
+  >
+    {% block content %}
+    {% endblock %}
+
+  </body>
+</html>
