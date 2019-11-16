@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+
+
+
+<html class = "bg">
+  <head>
+    <meta charset="utf-8">
+    <title>Generator Korwinizmów</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'favicon/safari-pinned-tab.svg" color="#5bbad5' %">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+
+
+  <body class = "bg">
+<!--~tutaj umieszczam bloczki tj.divy do edycji stronki za pomocą css'a-->
+    <div id = "kontener" class = "czcionka">
+
+    <div id = "naglowek">
+Generator Korwinizmów
+    </div>
+
+
+
+    <div id = "witaj" class = "pole"><a href="{% url 'witaj' %}"></a>
+ SIEEMAA Lorem Ipsum is simply dummy text of the printing and typesetting </br>
+    </div>
+
+
+
+    <div id = "autorzy" class = "pole"><a href="{% url 'autorzy' %}">Autorzy projektu</a>
+Lorem Ipsum is simply dummy text of the printing and typesetting </br>
+    </div>
+
+
+    <div id = "generator"><a href="{% url 'generator' %}">Wygeneruj!</a>
+  Lorem Ipsum is simply dummy text of the printing and typesetting </br>
+
+
+    </div>
+
+    <div id = "miejsce"> <h1>
+  {% block content %}
+  {% endblock %}
+</h1>
+    </div>
+
+    <div id = "stopka"> Lorem Ipsum is simply dummy text of the printing and typesetting </br>
+    </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
